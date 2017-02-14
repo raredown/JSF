@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="estilos.css"  />
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <h:dataTable border="2" value="#{nombres.nombres}" var="nombre">
+            <h:column>
+                <f:facet name="header" >Nombres</f:facet>
+                <h:outputText value="#{nombre}" />
+
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombres</f:facet>
+                <h:outputText value="#{nombre}" styleClass="mensajeverde"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombres</f:facet>
+                <h:outputText value="#{nombre}" styleClass="mensajerojo"/>
+            </h:column>
+        </h:dataTable>
+
+        <h:dataTable border="2" value="#{listaNumeros}" var="numero">
+            <h:column>
+                <f:facet name="header">Numero</f:facet>
+                <h:outputText value="#{numero}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Button</f:facet>
+                <h:button value="#{numero}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Radion button</f:facet>
+                <h:selectOneRadio >
+                    <f:selectItem  itemLabel="Si" itemValue="#{numero}" />
+                    <f:selectItem itemLabel="no" itemValue="#{numero}" />
+                </h:selectOneRadio>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Listas</f:facet>
+                <h:selectOneListbox >
+                    <f:selectItem  itemLabel="casado" itemValue="#{numero}" />
+                    <f:selectItem  itemLabel="diborciado" itemValue="#{numero}" />
+                    <f:selectItem  itemLabel="viudo" itemValue="#{numero}" />
+                    <f:selectItem  itemLabel="soltero" itemValue="#{numero}" />
+                </h:selectOneListbox>
+            </h:column>
+        </h:dataTable>
+        <h:dataTable border="2" value="#{mapa.entrySet().toArray()}" var="dora">
+            <h:column>
+                <f:facet name="header" >key</f:facet>
+                <h:outputText value="#{dora.key}" />
+
+            </h:column>
+            <h:column>
+                <f:facet name="header">valor</f:facet>
+                <h:outputText value="#{dora.value}" styleClass="mensajeverde"/>
+            </h:column>
+        
+        </h:dataTable>
+        <h:outputText value="#{nombres.prefijo}" styleClass="mensajeverde"/>
+    </h:body>
+</html>
+

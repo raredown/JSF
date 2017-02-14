@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.1"
+              xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+    <navigation-rule>
+        <from-view-id>login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>usuarioCorrecto</from-outcome>
+            <to-view-id>correcto.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>usuarioIncorrecto</from-outcome>
+            <to-view-id>incorrecto.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Salir</from-outcome>
+            <to-view-id>salir.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>listaNumeros</managed-bean-name>
+        <managed-bean-class>java.util.ArrayList</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <list-entries>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <value>4</value>
+            <value>5</value>
+        </list-entries>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>mapa</managed-bean-name>
+        <managed-bean-class>java.util.HashMap</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <map-entries>
+            <map-entry>
+                <key>06200</key>
+                <value>Almendralejo</value>
+            </map-entry>
+            <map-entry>
+                <key>06300</key>
+                <value>Merida</value>
+            </map-entry>
+            <map-entry>
+                <key>06201</key>
+                <value>Badajoz</value>
+            </map-entry>
+        </map-entries>
+    </managed-bean>
+
+</faces-config>
