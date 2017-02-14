@@ -9,25 +9,16 @@ import java.io.Serializable;
 @SessionScoped
 public class HelloBean implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private String name;
-    private String sexo ;
+	private String name;
 
-    public String getSexo() {
-        return sexo;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }

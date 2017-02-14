@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.albarregas</groupId>
-    <artifactId>InyeccionBeans</artifactId>
+    <artifactId>InyeccionBeansSinanotaciones</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>InyeccionBeans</name>
+    <name>InyeccionBeanssinanotaciones</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
